@@ -34,7 +34,7 @@
 
 ### Links Utilizados para apoio:
 
--ViewPager
+- ViewPager
 Link: https://developer.android.com/guide/navigation/navigation-swipe-view?hl=pt-br
 
 - ViewModel
