@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_bottom_sheet"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/margin_screen" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/margin_screen" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgTop"
+            android:layout_width="200dp"
+            android:layout_height="8dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/cinza"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/area_titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+            app:layout_constraintStart_toEndOf="@+id/area_icone"
+            app:layout_constraintTop_toBottomOf="@id/imgTop">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/idTarefa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/statusTarefa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTituloTarefa"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="@string/editar_tarefa"
+                android:textColor="@color/black"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvStatusTarefa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Altere dados de uma tarefa existente"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/area_icone"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toEndOf="@id/guidelineLeft"
+            app:layout_constraintTop_toTopOf="@id/area_titulo">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btVoltar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginEnd="20dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/icback"
+                app:layout_constraintStart_toEndOf="@id/view_linha" />
+
+
+            <View
+                android:id="@+id/view_linha"
+                android:layout_width="2dp"
+                android:layout_height="80dp"
+                android:background="@color/cinza"
+                app:layout_constraintStart_toEndOf="@id/area_titulo"
+                app:layout_constraintTop_toTopOf="@id/area_titulo" />
+
+        </LinearLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutTituloTarefa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColorHint="@color/purple_500"
+            app:hintTextColor="@color/purple_500"
+            app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+            app:layout_constraintStart_toEndOf="@id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@id/area_icone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etTituloTarefa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bgCampo"
+                android:hint="Título da tarefa" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etDescricaoTarefa"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/bgCampo"
+            android:gravity="top"
+            android:hint="@string/descricao_da_tarefa"
+            android:maxLines="3"
+            android:padding="10dp"
+            app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+            app:layout_constraintStart_toEndOf="@id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@id/layoutTituloTarefa" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOpcional"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opcional"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@+id/etDescricaoTarefa" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btSalvarTarefa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/background_button_arredondado"
+            android:padding="20dp"
+            android:text="@string/salvar"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+            app:layout_constraintStart_toEndOf="@id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@+id/tvOpcional" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

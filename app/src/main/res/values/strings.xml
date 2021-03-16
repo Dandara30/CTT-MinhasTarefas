@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Minhas Tarefas</string>
+    <string name="titulo_cabecalho">Tarefas</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_1">A fazer</string>
+    <string name="tab_2">Em progresso</string>
+    <string name="tab_3">Feito</string>
+    <string name="bt_Adicionar">Adicionar</string>
+    <string name="logo_lista_vazia">Lista vazia</string>
+    <string name="msg_vazia_titulo">Opa... Não há nada aqui!</string>
+    <string name="msg_vazia_afazer">Mas aposto que você possui muita coisa para fazer.\n\nComece sua lista!</string>
+    <string name="msg_vazia_emprogresso">Que tal iniciar alguma tarefa da sua lista?</string>
+    <string name="msg_vazia_feita">Acredito no seu potencial de terminar uma tarefa hoje. ;)</string>
+    <string name="nova_tarefa">Nova tarefa</string>
+    <string name="titulo_da_tarefa">Titulo da tarefa</string>
+    <string name="descricao_da_tarefa">Descrição da tarefa</string>
+
+    <string name="descricao_longa">Preciso estudar alguns conceitos como herança,polimorfismo... Devo pesquisar por mais referencias do assunto em kotlin para eu arrasar no campinas tech talents</string>
+    <string name="label_excluir_tarefa">Excluir tarefa</string>
+    <string name="label_iniciar_tarefa">Iniciar tarefa</string>
+    <string name="label_finalizar_tarefa">Finalizar tarefa</string>
+    <string name="label_criar_tarefa">Criar tarefa</string>
+    <string name="editar_tarefa">Editar tarefa</string>
+    <string name="salvar">Salvar</string>
+
+</resources>

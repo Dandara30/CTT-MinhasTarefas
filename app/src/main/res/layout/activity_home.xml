@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgListaTarefas"
+    tools:context=".ui.activity.HomeActivity">
+
+    <include
+        android:id="@+id/cabecalho"
+        layout="@layout/home_cabecalho"
+        app:layout_constraintBottom_toTopOf="@id/viewPagerTarefas" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPagerTarefas"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:focusableInTouchMode="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cabecalho"
+        app:layout_constraintBottom_toTopOf="@id/bottom_screen"/>
+
+    <View
+        android:id="@+id/bottom_screen"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
